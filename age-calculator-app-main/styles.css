@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap');
+
+:root {
+    --Purple: hsl(259,100%,65%);
+    --Light-Red: hsl(0,100%,67%);
+    --White: hsl(0,0%,100%);
+    --Off-White: hsl(0,0%,94%);
+    --Light-Grey: hsl(0,0%,86%);
+    --Smoke-Grey: hsl(0,1%,44%);
+    --Off-Black: hsl(0,0%,8%);
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;    
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: hsl(0, 0%, 94%);
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+}
+
+.container {
+    background-color: white;
+    padding: 45px;
+    border-radius: 35px 35px 120px 35px;
+}
+.form {
+    display: flex;
+    gap: 11px;
+    padding-right: 130px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-right: 10px;   
+}
+.form-group label  {
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: hsl(0, 1%, 44%);
+}
+
+.form-group input  {
+    border: 1px solid hsl(0, 0%, 86%);    
+    padding: 6px 10px 6px 15px;
+    font-size: 23px;
+    max-width: 120px;
+    color:hsl(0, 0%, 8%);
+    border-radius: 6px;    
+}
+
+input:focus {
+    outline: 1px solid hsl(259, 100%, 65%);
+}
+
+input::placeholder {
+    color:hsl(0, 2%, 62%);
+}
+.day-error, .month-error, .year-error {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-style: italic;
+    font-weight: lighter;
+    color: var(--Light-Red);
+}
+
+.container-btn {
+   display: flex;
+   align-items: center;  
+   color: white; 
+}
+.container-btn hr {
+    width: 100%;
+    border-top: 1px solid hsl(0, 0%, 86%);
+}
+
+.container-btn button {
+    border-radius: 50%;
+    padding: 1rem;
+    background-color:hsl(259, 100%, 65%);
+    border: none;
+    cursor: pointer;
+}
+
+.container-btn button:hover{
+    background-color: black;
+}
+.age-content {
+    font-size: 2.2rem;
+    font-weight: 800;
+    font-style: italic
+}
+
+.age-content span {
+    color: hsl(259, 100%, 65%);
+}
+
+.confetti{
+    display: block;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+    user-select: none;
+  }
+
+.can {
+   display: none;
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   z-index: -1;
+   overflow-y: hidden;
+}
+
+
+@media screen and (max-width:600px) {
+
+    .container {
+        padding: 60px 35px;
+    }
+    .form {
+        padding-right: 0;
+        margin-bottom: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .container-btn {
+        position: relative;
+        padding: 50px 0px;
+        margin-bottom: 25px;
+    }
+ 
+
+    .form-group label {
+        font-size: 14px;
+    }
+
+    .container-btn button {
+        position: absolute;
+        left: 150px;
+    }    
+
+    .form-group input {
+        max-width: 110px;
+        height: 65px;
+    }
+
+    .age-content {       
+        font-size: 1.9rem;
+        padding-right: 30px;
+    }
+}
